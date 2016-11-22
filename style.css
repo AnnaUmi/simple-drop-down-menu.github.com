@@ -1,0 +1,155 @@
+/*Eric Meyer's Reset CSS v2.0*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*End Reset*/
+*,*:before, *:after{
+	box-sizing: border-box;
+}
+body{
+	background-color: #c49475;
+}
+.mobil-menu-wrap{
+	display: block;
+	background-color: #c72e4f;
+	height: 55px;
+	border-bottom: 1px solid #f5ebe3;
+	display: none;
+
+}
+.mobil-menu-wrap span {
+	line-height: 45px;
+	font-size: 35px;
+	color: #f5ebe3;
+	margin-left: 5px;
+	cursor: pointer;
+}
+.mobil-menu ul li{
+	display: block;
+	background-color:  #c72e4f;
+	padding: 14px;
+	border-bottom: 1px solid #f5ebe3;
+
+}
+.mobil-menu ul li:first-child{
+	border-top: 1px solid #f5ebe3;
+}
+.mobil-menu a{
+	text-decoration: none;
+	color: #f5ebe3;
+
+}
+.main-menu-wrap ul {
+	background: #c72e4f;
+	font-size: 0;
+	height: 55px;
+}
+
+.main-menu-wrap ul li {
+	display: inline-block;
+	position: relative;
+	padding: 10px 25px;
+	border-right: 1px solid #f5ebe3;
+	font-size: 16px;
+	line-height: 35px;
+}
+.main-menu-wrap ul li:first-child{
+	border-left: 1px solid #f5ebe3;
+}
+.main-menu-wrap ul ul li{
+	border:1px solid #f5ebe3;
+}
+.main-menu-wrap ul li a{
+	color: #fff;
+	text-decoration: none;
+}
+.main-menu-wrap ul ul {
+	display: none;
+	position: absolute;
+	top:100%;
+	left: 0;
+}
+.main-menu-wrap ul ul i {
+	float: right;
+}
+.main-menu-wrap ul ul ul{
+	top:0;
+	left: 100%;
+}
+.main-menu-wrap ul ul li{
+	display: block;
+	padding: 10px 15px;
+	background: #c72e4f;
+	width: 200px;
+
+}
+.main-menu-wrap ul ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+.main-menu-wrap ul li:hover > ul{
+	display: block;
+}
+.nodisplay {
+	display: none;
+}
+.main-menu-wrap img{
+	float: left;
+	margin: 7px 35px;
+}
+.hover{
+	transform: translateY(0);
+	backface-visibility: hidden;
+	position: relative;
+  	transition-property: color;
+   transition-duration: 0.3s;
+}
+.hover:before{
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top:0;
+	bottom:0;
+	left: 0;
+	right: 0;
+	background: #b32644;
+	transform: scaleY(1);
+	transform-origin: 50%;
+	transition-property: transform;
+	transition-duration: .3s;
+	transition-timing-function: ease-out;
+}
+.hover:hover:before, .hover:focus:before, .hover:active:before{
+	transform:scaleY(0);
+}
+
+@media(max-width: 700px){
+	.mobil-menu-wrap{
+		display: block;
+	}
+	.main-menu-wrap{
+		display: none;
+	}
+}
